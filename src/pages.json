@@ -1,16 +1,74 @@
-{
+{	
+	//组件自动引入规则
+	"easycom": {
+				//开启自动扫描
+				"autoscan": true,
+				//以正则方式自定义组件匹配规则
+				"custom": {
+					// uni-ui 规则如下配置
+					"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+				}
+			},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/activity/activity",
+			"style": {
+				"navigationBarTitleText": "任务"
+			}
+		},
+		{
+			"path": "pages/chat/chat",
+			"style": {
+				"navigationBarTitleText": "消息"
+			}
+		},
+		{
+		    "path" : "pages/mine/mine",
+		    "style" : {
+		    "navigationBarTitleText": "我的"
 			}
 		}
 	],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
+		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
+		"navigationBarBackgroundColor": "#F98262",
 		"backgroundColor": "#F8F8F8"
-	}
+	},
+	"tabBar": {
+			"selectedColor": "#F98262",
+			"list": [
+				{
+					"pagePath": "pages/index/index",
+					"text": "首页",
+					"iconPath": "static/tabs/home_2_line.png",
+					"selectedIconPath": "static/tabs/home_2_fill.png"
+				},
+				{
+					"pagePath": "pages/activity/activity",
+					"text": "任务",
+					"iconPath": "static/tabs/document_line.png",
+					"selectedIconPath": "static/tabs/document_fill.png"
+				},
+				{
+					"pagePath": "pages/chat/chat",
+					"text": "消息",
+					"iconPath": "static/tabs/chat_4_line.png",
+					"selectedIconPath": "static/tabs/chat_4_fill.png"
+				},
+				{
+					"pagePath": "pages/mine/mine",
+					"text": "我的",
+					"iconPath": "static/tabs/user_2_line.png",
+					"selectedIconPath": "static/tabs/user_2_fill.png"
+				}
+			]
+		},
+		"uniIdRouter": {}
 }
