@@ -1,12 +1,16 @@
 <script setup lang="ts">
 import { useMemberStore } from '@/stores'
+import '@/utils/http'
+
+const memberStore = useMemberStore()
 //测试请求
 const getData = () => {
   uni.request({
-    url: '',
+    method: 'GET',
+    url: '/home/banner',
+    header: {},
   })
 }
-const memberStore = useMemberStore()
 </script>
 
 <template>
@@ -16,6 +20,7 @@ const memberStore = useMemberStore()
       @tap="
         memberStore.setProfile({
           nickname: 'mc先锋',
+          token: '12345',
         })
       "
       size="mini"
