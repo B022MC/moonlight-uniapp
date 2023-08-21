@@ -1,22 +1,11 @@
-<template>
-	<view>
-		消息
-	</view>
-</template>
-
-<script>
-	export default {
-		data() {
-			return {
-				
-			}
-		},
-		methods: {
-			
-		}
-	}
+<script setup lang="ts">
+//
 </script>
 
-<style>
+<template>
+  <view class="cart">cart</view>
+</template>
 
+<style lang="scss">
+//
 </style>
