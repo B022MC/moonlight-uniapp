@@ -31,8 +31,8 @@ const httpInterceptor = {
       'source-client': 'miniapp',
     }
     //4.添加 token 请求头表示
-    const menberStore = useMemberStore()
-    const token = menberStore.profile?.token
+    const memberStore = useMemberStore()
+    const token = memberStore.profile?.token
     if (token) {
       options.header.Authorization = token
     }
