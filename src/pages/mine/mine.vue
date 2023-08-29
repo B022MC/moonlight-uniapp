@@ -20,7 +20,7 @@ const getData = async () => {
     <button
       @tap="
         memberStore.setProfile({
-          nickname: 'mc先锋',
+          nickname: 'mc',
           token: '12345',
         })
       "
