@@ -1,31 +1,44 @@
 {
+  // 组件自动引入规则
+  "easycom": {
+    // 是否开启自动扫描 @/components/$1/$1.vue 组件
+    "autoscan": true,
+    // 以正则方式自定义组件匹配规则
+    "custom": {
+      // uni-ui 规则如下配置
+      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue",
+      // 以 Xtx 开头的组件，在 components 目录中查找
+      "^Jzs(.*)": "@/components/Jzs$1.vue"
+    }
+  },
   "pages": [
     //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
     {
-			"path": "pages/index/index",
-			"style": {
+      "path": "pages/index/index",
+      "style": {
         "navigationStyle": "custom",
-				"navigationBarTitleText": "首页"
-			}
-		},
-		{
-			"path": "pages/activity/activity",
-			"style": {
-				"navigationBarTitleText": "任务"
-			}
-		},
-		{
-			"path": "pages/chat/chat",
-			"style": {
-				"navigationBarTitleText": "消息"
-			}
-		},
-		{
-		    "path" : "pages/mine/mine",
-		    "style" : {
-		    "navigationBarTitleText": "我的"
-			}
-		},
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "pages/activity/activity",
+      "style": {
+        "navigationBarTitleText": "任务"
+      }
+    },
+    {
+      "path": "pages/chat/chat",
+      "style": {
+        "navigationBarTitleText": "消息"
+      }
+    },
+    {
+      "path": "pages/mine/mine",
+      "style": {
+        "navigationBarTitleText": "我的"
+      }
+    },
     {
       "path": "pages/login/login",
       "style": {
@@ -47,29 +60,29 @@
     "borderStyle": "white",
     "list": [
       {
-					"pagePath": "pages/index/index",
-					"text": "首页",
-					"iconPath": "static/tabs/home_2_line.png",
-					"selectedIconPath": "static/tabs/home_2_fill.png"
-				},
-				{
-					"pagePath": "pages/activity/activity",
-					"text": "任务",
-					"iconPath": "static/tabs/document_line.png",
-					"selectedIconPath": "static/tabs/document_fill.png"
-				},
-				{
-					"pagePath": "pages/chat/chat",
-					"text": "消息",
-					"iconPath": "static/tabs/chat_4_line.png",
-					"selectedIconPath": "static/tabs/chat_4_fill.png"
-				},
-				{
-					"pagePath": "pages/mine/mine",
-					"text": "我的",
-					"iconPath": "static/tabs/user_2_line.png",
-					"selectedIconPath": "static/tabs/user_2_fill.png"
-				}
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/tabs/home_2_line.png",
+        "selectedIconPath": "static/tabs/home_2_fill.png"
+      },
+      {
+        "pagePath": "pages/activity/activity",
+        "text": "任务",
+        "iconPath": "static/tabs/document_line.png",
+        "selectedIconPath": "static/tabs/document_fill.png"
+      },
+      {
+        "pagePath": "pages/chat/chat",
+        "text": "消息",
+        "iconPath": "static/tabs/chat_4_line.png",
+        "selectedIconPath": "static/tabs/chat_4_fill.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "static/tabs/user_2_line.png",
+        "selectedIconPath": "static/tabs/user_2_fill.png"
+      }
     ]
   }
 }
