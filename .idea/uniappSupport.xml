@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="UniappSupport">
+    <option name="cliProject" value="true" />
+    <option name="uniapp" value="true" />
+    <option name="isCliProject" value="true" />
+    <option name="srcPath" value="/src/" />
+    <option name="vueVersion" value="3" />
+    <option name="isUniapp" value="true" />
+    <option name="pluginEnabled" value="true" />
+  </component>
+</project>
