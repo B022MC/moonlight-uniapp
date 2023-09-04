@@ -4,8 +4,10 @@ import { ref } from 'vue'
 const activeIndex = ref(0)
 
 //当swiper发生改变时
-const onChange: UniHelper.SwiperOnChange = (event: any) => {
-  console.log(event)
+const onChange: UniHelper.SwiperOnChange = (event) => {
+  // console.log(event.detail?.current)
+  //!非空断言，主观上排除空值情况
+  activeIndex.value = event.detail!.current
 }
 </script>
 
