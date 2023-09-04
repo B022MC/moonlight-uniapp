@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import CustomNavbar from '@/pages/index/components/CustomNavbar.vue'
 import { getHomeBannerAPI } from '@/services/home'
+import type { BannerItem } from '@/types/home'
 import { onLoad } from '@dcloudio/uni-app'
 import { ref } from 'vue'
 
-const bannerList = ref([])
+const bannerList = ref<BannerItem[]>([])
 const getHomeBannerData = async () => {
   const res = await getHomeBannerAPI()
   console.log(res)
@@ -18,7 +19,7 @@ onLoad(() => {
 
 <template>
   <CustomNavbar />
-  <JzsSwiper />
+  <JzsSwiper :list="bannerList" />
   <view class="index">index</view>
 </template>
 
